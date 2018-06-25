@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ip:</strong>
+  <%= @server.ip %>
+</p>
+
+<p>
+  <strong>Sn:</strong>
+  <%= @server.sn %>
+</p>
+
+<p>
+  <strong>Os:</strong>
+  <%= @server.os %>
+</p>
+
+<p>
+  <strong>Purchase time:</strong>
+  <%= @server.purchase_time %>
+</p>
+
+<%= link_to 'Edit', edit_server_path(@server) %> |
+<%= link_to 'Back', servers_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ip: MyString
+  sn: MyString
+  os: MyString
+  purchase_time: 2018-06-26
+
+two:
+  ip: MyString
+  sn: MyString
+  os: MyString
+  purchase_time: 2018-06-26
