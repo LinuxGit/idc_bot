@@ -11,19 +11,19 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :ip %>
-    <%= form.text_field :ip %>
+  <div class="form-group">
+    <%= form.label :ip, "IP" %>
+    <%= form.text_field :ip, class: 'form-control' %>
   </div>
 
   <div class="field">
-    <%= form.label :sn %>
-    <%= form.text_field :sn %>
+    <%= form.label :sn, "SN" %>
+    <%= form.text_field :sn, class: 'form-control' %>
   </div>
 
   <div class="field">
-    <%= form.label :os %>
-    <%= form.text_field :os %>
+    <%= form.label :os, "OS" %>
+    <%= form.text_field :os, class: 'form-control' %>
   </div>
 
   <div class="field">
@@ -32,6 +32,6 @@
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Update", class: "btn btn-success" %>
   </div>
 <% end %>

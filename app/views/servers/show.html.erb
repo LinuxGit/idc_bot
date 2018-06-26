@@ -1,24 +1,31 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-md-4 offset-md-4">
+    <p id="notice"><%= notice %></p>
+    
+    <h3>Server Info</h3>
 
-<p>
-  <strong>Ip:</strong>
-  <%= @server.ip %>
-</p>
+    <table class="table">
+      <tbody>
+        <tr>
+          <th scope="row">IP</th>
+          <td><%= @server.ip %></td>
+        </tr>
+        <tr>
+          <th scope="row">SN</th>
+          <td><%= @server.sn %></td>
+        </tr>
+        <tr>
+          <th scope="row">OS</th>
+          <td><%= @server.os %></td>
+        </tr>
+        <tr>
+          <th scope="row">Purchase time</th>
+          <td><%= @server.purchase_time %></td>
+        </tr>
+      </tbody>
+    </table>
 
-<p>
-  <strong>Sn:</strong>
-  <%= @server.sn %>
-</p>
-
-<p>
-  <strong>Os:</strong>
-  <%= @server.os %>
-</p>
-
-<p>
-  <strong>Purchase time:</strong>
-  <%= @server.purchase_time %>
-</p>
-
-<%= link_to 'Edit', edit_server_path(@server) %> |
-<%= link_to 'Back', servers_path %>
+    <%= link_to 'Edit', edit_server_path(@server) %> |
+    <%= link_to 'Back', servers_path %>
+  </div>
+</div>

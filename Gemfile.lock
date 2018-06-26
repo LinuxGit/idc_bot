@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/thomaspark/bootswatch.git
+  revision: 40d97d65887f9c067a86da195c65f0edbbdceebc
+  specs:
+    bootswatch (4.1.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -205,6 +211,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.1.0)
   bootstrap (~> 4.1.1)
+  bootswatch!
   byebug
   capybara (>= 2.15, < 4.0)
   chromedriver-helper
