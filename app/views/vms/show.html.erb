@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ip:</strong>
+  <%= @vm.ip %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @vm.status %>
+</p>
+
+<p>
+  <strong>Server:</strong>
+  <%= @vm.server.ip %>
+</p>
+
+<%= link_to 'Edit', edit_vm_path(@vm) %> |
+<%= link_to 'Back', vms_path %>

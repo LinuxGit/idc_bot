@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h3>VM List</h3>
+
+<table class="table">
+  <thead>
+    <tr class="table-secondary">
+      <th>IP</th>
+      <th>Status</th>
+      <th>Server</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vms.each do |vm| %>
+      <tr>
+        <td><%= vm.ip %></td>
+        <td><span class="badge badge-success"><%= vm.status %></span></td>
+        <td><%= vm.server.ip %></td>
+        <td><%= link_to 'Show', vm %></td>
+        <td><%= link_to 'Edit', edit_vm_path(vm) %></td>
+        <td><%= link_to 'Destroy', vm, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New VM', new_vm_path %>

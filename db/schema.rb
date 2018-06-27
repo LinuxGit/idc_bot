@@ -10,13 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_25_184755) do
+ActiveRecord::Schema.define(version: 2018_06_27_182527) do
 
   create_table "servers", force: :cascade do |t|
     t.string "ip"
     t.string "sn"
     t.string "os"
     t.date "purchase_time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "vms", force: :cascade do |t|
+    t.string "ip"
+    t.integer "status"
+    t.integer "server_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

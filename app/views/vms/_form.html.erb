@@ -1,0 +1,32 @@
+<%= form_with(model: vm, local: true) do |form| %>
+  <% if vm.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(vm.errors.count, "error") %> prohibited this vm from being saved:</h2>
+
+      <ul>
+      <% vm.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :ip %>
+    <%= form.text_field :ip %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.select :status, Vm.statuses.keys %>
+  </div>
+
+  <div class="field">
+    <%= form.label :server_id %>
+    <%= form.number_field :server_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
