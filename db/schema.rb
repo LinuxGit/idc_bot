@@ -10,13 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_27_182527) do
+ActiveRecord::Schema.define(version: 2018_06_28_190853) do
 
   create_table "servers", force: :cascade do |t|
     t.string "ip"
     t.string "sn"
     t.string "os"
     t.date "purchase_time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "vm_sizes", force: :cascade do |t|
+    t.string "size_name"
+    t.integer "cpu_cores"
+    t.integer "memory"
+    t.integer "storage"
+    t.integer "disk"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

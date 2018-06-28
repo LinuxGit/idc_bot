@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h3>Vm Types</h3>
+
+<table class="table">
+  <thead>
+    <tr class="table-secondary">
+      <th>Size name</th>
+      <th>CPU cores</th>
+      <th>Memory</th>
+      <th>Storage</th>
+      <th>Disk</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vm_sizes.each do |vm_size| %>
+      <tr>
+        <td><%= link_to vm_size.size_name, vm_size %></td>
+        <td><%= vm_size.cpu_cores %></td>
+        <td><%= vm_size.memory %></td>
+        <td><%= vm_size.storage %></td>
+        <td><%= vm_size.disk %></td>
+        <td><%= link_to 'Edit', edit_vm_size_path(vm_size) %></td>
+        <td><%= link_to 'Destroy', vm_size, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New VM type', new_vm_size_path %>

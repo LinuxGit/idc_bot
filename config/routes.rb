@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :vm_sizes
   resources :vms
   resources :servers
   
