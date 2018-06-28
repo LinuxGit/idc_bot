@@ -16,22 +16,24 @@
     <%= form.text_field :ip, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :sn, "SN" %>
     <%= form.text_field :sn, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :os, "OS" %>
     <%= form.text_field :os, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :purchase_time %>
-    <%= form.date_select :purchase_time %>
+  <div class="form-group">
+      <%= form.label :purchase_time %>
+      <div class="form-inline">
+        <%= form.date_select :purchase_time, {}, { class: "custom-select" } %>
+    </div>
   </div>
 
-  <div class="actions">
-    <%= form.submit "Update", class: "btn btn-success" %>
+  <div class="form-group">
+    <%= form.submit "Submit", class: "btn btn-success" %>
   </div>
 <% end %>

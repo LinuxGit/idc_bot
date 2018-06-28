@@ -11,22 +11,22 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :ip %>
-    <%= form.text_field :ip %>
+  <div class="form-group">
+    <%= form.label :ip, "IP" %>
+    <%= form.text_field :ip, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :status %>
-    <%= form.select :status, Vm.statuses.keys %>
+    <%= form.select :status, Vm.statuses.keys, {}, { class: "custom-select" } %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :server_id %>
-    <%= form.number_field :server_id %>
+    <%= form.number_field :server_id, class: 'form-control' %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group">
+    <%= form.submit "Submit", class: "btn btn-success" %>
   </div>
 <% end %>
