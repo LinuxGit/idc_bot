@@ -1,4 +1,5 @@
 class VmSize < ApplicationRecord
+  has_many :vms
 
   enum disk: {
     "SAS" => 0,

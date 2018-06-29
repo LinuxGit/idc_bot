@@ -6,6 +6,7 @@
   <thead>
     <tr class="table-secondary">
       <th>IP</th>
+      <th>Type</th>
       <th>Status</th>
       <th>Server</th>
       <th colspan="3"></th>
@@ -16,6 +17,7 @@
     <% @vms.each do |vm| %>
       <tr>
         <td><%= link_to vm.ip, vm %></td>
+        <td><%= link_to vm.vm_size.size_name, vm.vm_size %></td>
         <td><span class="badge badge-success"><%= vm.status %></span></td>
         <td><%= vm.server.ip %></td>
         <td><%= link_to 'Edit', edit_vm_path(vm) %></td>

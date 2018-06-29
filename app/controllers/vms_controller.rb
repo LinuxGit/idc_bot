@@ -69,6 +69,6 @@ class VmsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def vm_params
-      params.require(:vm).permit(:ip, :status, :server_id)
+      params.require(:vm).permit(:ip, :status, :server_id, :vm_size_id)
     end
 end

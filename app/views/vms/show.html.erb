@@ -11,6 +11,10 @@
           <td><%= @vm.ip %></td>
         </tr>
         <tr>
+          <th scope="row">Type</th>
+          <td><%= link_to @vm.vm_size.size_name, @vm.vm_size %></td>
+        </tr>
+        <tr>
           <th scope="row">Status</th>
           <td><span class="badge badge-success"><%= @vm.status %></span></td>
         </tr>
@@ -25,4 +29,3 @@
     <%= link_to 'Back', vms_path %>
   </div>
 </div>
-

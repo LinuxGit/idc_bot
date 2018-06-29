@@ -17,6 +17,11 @@
   </div>
 
   <div class="form-group">
+    <%= form.label :vm_size_id %>
+    <%= form.number_field :vm_size_id, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
     <%= form.label :status %>
     <%= form.select :status, Vm.statuses.keys, {}, { class: "custom-select" } %>
   </div>
