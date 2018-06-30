@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  size_name: MyString
+  model: 1
+  cpu: MyString
+  cpu_cores: 1
+  memory: 1
+  disk: MyText
+
+two:
+  size_name: MyString
+  model: 1
+  cpu: MyString
+  cpu_cores: 1
+  memory: 1
+  disk: MyText

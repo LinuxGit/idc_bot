@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_29_115032) do
+ActiveRecord::Schema.define(version: 2018_06_30_120301) do
+
+  create_table "server_sizes", force: :cascade do |t|
+    t.string "size_name"
+    t.integer "model"
+    t.string "cpu"
+    t.integer "cpu_cores"
+    t.integer "memory"
+    t.text "disk"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "servers", force: :cascade do |t|
     t.string "ip"

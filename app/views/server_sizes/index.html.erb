@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h3>Server Types</h3>
+
+<table class="table">
+  <thead>
+    <tr class="table-secondary">
+      <th>Type name</th>
+      <th>Model</th>
+      <th>CPU</th>
+      <th>CPU cores</th>
+      <th>Memory</th>
+      <th>Disk</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @server_sizes.each do |server_size| %>
+      <tr>
+        <td><%= link_to server_size.size_name, server_size %></td>
+        <td><%= server_size.model %></td>
+        <td><%= server_size.cpu %></td>
+        <td><%= server_size.cpu_cores %></td>
+        <td><%= server_size.memory %></td>
+        <td><%= server_size.disk %></td>
+        <td><%= link_to 'Edit', edit_server_size_path(server_size) %></td>
+        <td><%= link_to 'Destroy', server_size, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Server Type', new_server_size_path %>

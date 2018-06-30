@@ -1,0 +1,2 @@
+module ServerSizesHelper
+end
