@@ -18,7 +18,7 @@
 
   <div class="form-group">
     <%= form.label :vm_size_id %>
-    <%= form.number_field :vm_size_id, class: 'form-control' %>
+    <%= form.select :vm_size_id, VmSize.all.collect { |v| [ v.size_name, v.id ] }, {}, { class: "custom-select" } %>
   </div>
 
   <div class="form-group">
@@ -28,7 +28,7 @@
 
   <div class="form-group">
     <%= form.label :server_id %>
-    <%= form.number_field :server_id, class: 'form-control' %>
+    <%= form.select :server_id, Server.all.collect { |s| [ s.ip, s.id ] }, {}, { class: "custom-select" } %>
   </div>
 
   <div class="form-group">
