@@ -17,6 +17,11 @@
   </div>
 
   <div class="form-group">
+    <%= form.label :server_size_id, "Server type" %>
+    <%= form.select :server_size_id, ServerSize.all.collect { |s| [ s.size_name, s.id ] }, {}, { class: "custom-select" } %>
+  </div>
+
+  <div class="form-group">
     <%= form.label :sn, "SN" %>
     <%= form.text_field :sn, class: 'form-control' %>
   </div>

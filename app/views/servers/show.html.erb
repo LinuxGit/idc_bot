@@ -11,6 +11,10 @@
           <td><%= @server.ip %></td>
         </tr>
         <tr>
+          <th scope="row">Type</th>
+          <td><%= link_to @server.server_size.size_name, @server.server_size %></td>
+        </tr>
+        <tr>
           <th scope="row">Serial number</th>
           <td><%= @server.sn %></td>
         </tr>

@@ -6,6 +6,7 @@
   <thead>
     <tr class="table-secondary">
       <th>IP</th>
+      <th>Type</th>
       <th>SN</th>
       <th>OS</th>
       <th>Purchase time</th>
@@ -17,6 +18,7 @@
     <% @servers.each do |server| %>
       <tr>
         <td><%= link_to server.ip, server %></td>
+        <td><%= link_to server.server_size.size_name, server.server_size %></td>
         <td><%= server.sn %></td>
         <td><%= server.os %></td>
         <td><%= server.purchase_time %></td>

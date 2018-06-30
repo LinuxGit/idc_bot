@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_30_120301) do
+ActiveRecord::Schema.define(version: 2018_06_30_175632) do
 
   create_table "server_sizes", force: :cascade do |t|
     t.string "size_name"
@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(version: 2018_06_30_120301) do
     t.date "purchase_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "server_size_id"
+    t.index ["server_size_id"], name: "index_servers_on_server_size_id"
   end
 
   create_table "vm_sizes", force: :cascade do |t|
