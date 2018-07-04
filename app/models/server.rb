@@ -5,5 +5,7 @@ class Server < ApplicationRecord
   validates :ip, :server_size_id, :sn, :os, :purchase_time, presence: true
   validates :ip, uniqueness: true
 
-  default_scope -> { order(ip: :asc) }
+  def feed
+    Vm.where("server_id = ?", id)
+  end
 end

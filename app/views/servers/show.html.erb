@@ -1,15 +1,16 @@
 <div class="row">
-  <div class="col-md-4 offset-md-4">
+  <div class="col-md-4 offset-md-2">
     <p id="notice"><%= notice %></p>
 
-    <h3>Overview</h3>
+    <div class="card border-success mb-3" style="max-width: 20rem;">
+      <div class="card-header">Server Overview</div>
+      <div class="card-body">
+        <h4 class="card-title"><%= @server.ip %></h4>
+      </div>
+    </div>
 
     <table class="table">
       <tbody>
-        <tr>
-          <th scope="row">IP</th>
-          <td><%= @server.ip %></td>
-        </tr>
         <tr>
           <th scope="row">Type</th>
           <td><%= link_to @server.server_size.size_name, @server.server_size %></td>
@@ -33,3 +34,23 @@
     <%= link_to 'Back', servers_path %>
   </div>
 </div>
+
+<br>
+
+<div class="row">
+  <div class="col-md-4 offset-md-2">
+    <h4>Create VM on the server</h4>
+
+    <%= render 'vms/form', vm: @vm %>
+  </div>
+</div>
+
+<br>
+
+<% if @vms.any? %>
+<div class="row">
+  <div class="col-md-8 offset-md-2">
+    <%= render 'servers/vm' %>
+  </div>
+</div>
+<% end %>

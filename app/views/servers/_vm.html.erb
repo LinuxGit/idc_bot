@@ -1,6 +1,4 @@
-<p id="notice"><%= notice %></p>
-
-<h3>VM List</h3>
+<h4>VMs running on the server</h4>
 
 <table class="table">
   <thead>
@@ -8,7 +6,6 @@
       <th>IP</th>
       <th>Type</th>
       <th>Status</th>
-      <th>Server</th>
       <th colspan="2"></th>
     </tr>
   </thead>
@@ -19,7 +16,6 @@
         <td><%= link_to vm.ip, vm %></td>
         <td><%= link_to vm.vm_size.size_name, vm.vm_size %></td>
         <td><span class="badge badge-success"><%= vm.status %></span></td>
-        <td><%= vm.server.ip %></td>
         <td><%= link_to 'Edit', edit_vm_path(vm) %></td>
         <td><%= link_to 'Destroy', vm, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

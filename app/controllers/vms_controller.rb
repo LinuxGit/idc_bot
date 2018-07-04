@@ -25,7 +25,6 @@ class VmsController < ApplicationController
   # POST /vms.json
   def create
     @vm = Vm.new(vm_params)
-
     respond_to do |format|
       if @vm.save
         format.html { redirect_to @vm, notice: 'Vm was successfully created.' }
