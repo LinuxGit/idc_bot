@@ -2,7 +2,7 @@
   <div class="col-md-4 offset-md-4">
     <h3>New VM</h3>
 
-    <%= render 'form', vm: @vm %>
+    <%= render partial: 'form', locals: { vm: @vm, form_url: server_vms_path } %>
 
     <%= link_to 'Back', vms_path %>
   </div>

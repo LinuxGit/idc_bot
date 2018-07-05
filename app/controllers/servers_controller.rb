@@ -11,7 +11,6 @@ class ServersController < ApplicationController
   # GET /servers/1.json
   def show
     @vms = @server.feed
-    @vm = @server.vms.build
   end
 
   # GET /servers/new

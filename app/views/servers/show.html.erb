@@ -31,17 +31,8 @@
     </table>
 
     <%= link_to 'Edit', edit_server_path(@server) %> |
-    <%= link_to 'Back', servers_path %>
-  </div>
-</div>
-
-<br>
-
-<div class="row">
-  <div class="col-md-4 offset-md-2">
-    <h4>Create VM on the server</h4>
-
-    <%= render 'vms/form', vm: @vm %>
+    <%= link_to 'Back', servers_path %> |
+    <%= link_to 'New VM', new_server_vm_path(@server) %>
   </div>
 </div>
 

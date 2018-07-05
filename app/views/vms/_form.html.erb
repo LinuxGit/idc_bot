@@ -1,4 +1,4 @@
-<%= form_with(model: vm, local: true) do |form| %>
+<%= form_with(model: vm, local: true, url: form_url) do |form| %>
   <% if vm.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(vm.errors.count, "error") %> prohibited this vm from being saved:</h2>
@@ -24,11 +24,6 @@
   <div class="form-group">
     <%= form.label :status %>
     <%= form.select :status, Vm.statuses.keys, {}, { class: "custom-select" } %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :server_id %>
-    <%= form.select :server_id, Server.all.collect { |s| [ s.ip, s.id ] }, {}, { class: "custom-select" } %>
   </div>
 
   <div class="form-group">
