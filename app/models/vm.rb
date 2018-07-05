@@ -10,6 +10,6 @@ class Vm < ApplicationRecord
     "tombstone" => 4
   }
 
-  validates :ip, :status, :server_id, :vm_size_id, presence: true
+  validates :ip, :status, :vm_size_id, presence: true
   validates :ip, uniqueness: true
 end
