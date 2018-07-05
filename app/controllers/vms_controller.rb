@@ -4,7 +4,7 @@ class VmsController < ApplicationController
   # GET /vms
   # GET /vms.json
   def index
-    @vms = Vm.all
+    @vms = Vm.order(:ip).page params[:page]
   end
 
   # GET /vms/1
